@@ -1,0 +1,4 @@
+server:
+  port: 6510
+  servlet:
+    context-path: /parser
