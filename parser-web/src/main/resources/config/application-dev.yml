@@ -2,3 +2,11 @@ server:
   port: 6510
   servlet:
     context-path: /parser
+spring:
+  datasource:
+      user:
+         type: com.alibaba.druid.pool.DruidDataSource
+         url: jdbc:mysql://127.0.0.1:3306/kxlist_user?characterEncoding=utf-8
+         username: root
+         password: 123456
+         driver-class-name: com.mysql.jdbc.Driver

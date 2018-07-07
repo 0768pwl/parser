@@ -34,6 +34,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <mysql.version>5.1.6</mysql.version>
+        <druid-version>1.1.1</druid-version>
     </properties>
 
     <!--作为父模块 并不需要引入依赖 只提供对依赖的管理 统一管理依赖的版本号-->
@@ -63,6 +65,18 @@
                 <groupId>com.cz.pwl</groupId>
                 <artifactId>parser-dao</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <!--添加mysql-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!--添加druid连接池-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
