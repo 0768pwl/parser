@@ -6,7 +6,11 @@ spring:
   datasource:
       user:
          type: com.alibaba.druid.pool.DruidDataSource
-         url: jdbc:mysql://127.0.0.1:3306/kxlist_user?characterEncoding=utf-8
+         url: jdbc:mysql://127.0.0.1:3306/parser_user?characterEncoding=utf-8
          username: root
          password: 123456
          driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
