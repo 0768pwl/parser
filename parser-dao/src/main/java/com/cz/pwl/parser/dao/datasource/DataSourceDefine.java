@@ -17,8 +17,8 @@ import javax.sql.DataSource;
 @Configuration
 public class DataSourceDefine {
 
-    @Bean(name = "userDataSource")
     @Primary
+    @Bean(name = "userDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.user")
     public DataSource userDataSource(){
         return new DruidDataSource();
