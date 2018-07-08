@@ -17,10 +17,24 @@ import javax.sql.DataSource;
 @Configuration
 public class DataSourceDefine {
 
+    /**
+     * user数据源定义
+     * @return 数据源对象
+     */
     @Primary
     @Bean(name = "userDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.user")
     public DataSource userDataSource(){
+        return new DruidDataSource();
+    }
+
+    /**
+     * app数据源定义
+     * @return 数据源对象
+     */
+    @Bean
+    @ConfigurationProperties(prefix = "spring.datasource.app")
+    public DataSource appDataSource(){
         return new DruidDataSource();
     }
 
