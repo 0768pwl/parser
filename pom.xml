@@ -44,27 +44,27 @@
             <dependency>
                 <groupId>com.cz.pwl</groupId>
                 <artifactId>parser-web</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.cz.pwl</groupId>
                 <artifactId>parser-api</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.cz.pwl</groupId>
                 <artifactId>parser-service</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.cz.pwl</groupId>
                 <artifactId>parser-common</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.cz.pwl</groupId>
                 <artifactId>parser-dao</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <!--添加mysql-->
             <dependency>
