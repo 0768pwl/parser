@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+    <id>assembly</id>
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+    <fileSets>
+        <fileSet>
+            <directory>src/main/resources</directory>
+            <outputDirectory>runtime</outputDirectory>
+            <filtered>true</filtered>
+            <includes>
+                <include>config/application.yml</include>
+                <include>config/application-${profileActive}.yml</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+    <!--dependencySets用来定义选择依赖并定义最终打包到什么目录-->
+    <dependencySets>
+        <!--depenencySet默认包含所有所有依赖-->
+        <dependencySet>
+            <outputDirectory>lib</outputDirectory>
+            <!--useProjectArtifact表示将项目本身生成的构件也包含在内-->
+            <!--如果为false，则打包完成的将不包含parser-web模块-->
+            <useProjectArtifact>true</useProjectArtifact>
+        </dependencySet>
+    </dependencySets>
+</assembly>
